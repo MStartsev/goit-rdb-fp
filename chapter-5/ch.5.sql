@@ -1,8 +1,8 @@
-DROP FUNCTION IF EXISTS year_difference;
+DROP FUNCTION IF EXISTS YearDifference;
 
 DELIMITER //
 
-CREATE FUNCTION year_difference(input_year YEAR) RETURNS INT 
+CREATE FUNCTION YearDifference(input_year YEAR) RETURNS INT 
 DETERMINISTIC
 BEGIN 
     DECLARE start_of_year, current__date DATE; 
@@ -20,8 +20,8 @@ DELIMITER ;
 
 SELECT 
     pandemic_infections.Year,
-    year_difference(pandemic_infections.Year) 
-        AS year_difference
+    YearDifference(pandemic_infections.Year) 
+        AS YearDifference
 FROM 
     pandemic.infections 
         AS pandemic_infections;
