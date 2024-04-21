@@ -3,6 +3,7 @@ DROP FUNCTION IF EXISTS YearDifference;
 DELIMITER //
 
 CREATE FUNCTION YearDifference(input_year YEAR) RETURNS INT 
+
 DETERMINISTIC
 BEGIN 
     DECLARE start_of_year, current__date DATE; 
